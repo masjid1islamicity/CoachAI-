@@ -1,0 +1,6 @@
+{
+  "name": "MurshidAI - Platform Superaplikasi Coaching & Consulting",
+  "description": "Infrastruktur superaplikasi cerdas berdaya terbaik berbasis AI untuk coaching, mentoring, dan consulting dengan enkripsi end-to-end, manajemen sesi, kalender Hijriah terintegrasi, gerbang pembayaran, dan analitik performa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
