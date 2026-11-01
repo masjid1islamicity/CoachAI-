@@ -55,7 +55,7 @@ app.post('/api/gemini/coach-copilot', async (req, res) => {
         actionItems: [
           { task: 'Finalisasi peta jalan 90 hari dengan metrik OKR terukur', deadline: '3 hari', owner: 'Klien' },
           { task: 'Review evaluasi cash flow mingguan bersama tim keuangan', deadline: '1 minggu', owner: 'Klien & Tim' },
-          { task: 'Check-in progres via sistem terenkripsi MurshidAI', deadline: '2 minggu', owner: 'Mentor & Klien' }
+          { task: 'Check-in progres via sistem terenkripsi MursyidAI', deadline: '2 minggu', owner: 'Mentor & Klien' }
         ],
         recommendedSentiment: 'Optimis & Komitmen Tinggi'
       };
@@ -68,7 +68,7 @@ app.post('/api/gemini/coach-copilot', async (req, res) => {
       ? 'Respond strictly in Arabic with high-level professional coaching terminology.'
       : 'Gunakan Bahasa Indonesia formal, tajam, bernas, dan berbobot eksekutif.';
 
-    const prompt = `Anda adalah MurshidAI Executive Co-Pilot, penasihat strategis dan konsultan bisnis level dunia.
+    const prompt = `Anda adalah MursyidAI Executive Co-Pilot, penasihat strategis dan konsultan bisnis level dunia.
 Analisis data sesi coaching/mentoring berikut:
 - Nama Klien: ${clientName || 'Klien Eksekutif'}
 - Fokus Area: ${focusArea || 'Strategic Leadership & Business Scaling'}
@@ -115,7 +115,7 @@ Kembalikan respon DALAM FORMAT JSON VALID dengan struktur:
       actionItems: [
         { task: 'Finalisasi peta jalan 90 hari dengan metrik OKR terukur', deadline: '3 hari', owner: clientName || 'Klien' },
         { task: 'Review evaluasi cash flow mingguan bersama tim keuangan', deadline: '1 minggu', owner: 'Klien & Tim' },
-        { task: 'Check-in progres strategi via sistem terenkripsi MurshidAI', deadline: '2 minggu', owner: 'Mentor & Klien' }
+        { task: 'Check-in progres strategi via sistem terenkripsi MursyidAI', deadline: '2 minggu', owner: 'Mentor & Klien' }
       ],
       recommendedSentiment: 'Optimis & Komitmen Tinggi'
     };
@@ -257,7 +257,7 @@ app.post('/api/gemini/kpi-insights', async (req, res) => {
       ? 'Respond strictly in Arabic with high-level professional coaching terminology.'
       : 'Gunakan Bahasa Indonesia formal, taktis, tajam, dan berorientasi aksi eksekutif.';
 
-    const prompt = `Anda adalah MurshidAI Executive Growth Engine.
+    const prompt = `Anda adalah MursyidAI Executive Growth Engine.
 Analisis data performa KPI coaching & consulting berikut:
 Periode: ${period}
 Indeks Komposit: ${compositeScore}%
@@ -307,7 +307,7 @@ Kembalikan DALAM FORMAT JSON VALID dengan struktur:
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'online',
-    platform: 'MurshidAI Superapp Infrastructure',
+    platform: 'MursyidAI Superapp Infrastructure',
     timestamp: new Date().toISOString(),
     geminiConfigured: !!process.env.GEMINI_API_KEY
   });
@@ -330,7 +330,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`MurshidAI Server running on http://0.0.0.0:${PORT}`);
+    console.log(`MursyidAI Server running on http://0.0.0.0:${PORT}`);
   });
 }
 

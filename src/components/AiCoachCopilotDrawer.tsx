@@ -80,7 +80,7 @@ export const AiCoachCopilotDrawer: React.FC<AiCoachCopilotDrawerProps> = ({
         frameworkAnalysis: `Evaluasi melalui kerangka ${framework}: Goal jelas, Reality tantangan hiring terpetakan, Options diversifikasi vendor tersedia, dan Will komitmen klien berada pada skor 9.4/10.`,
         actionItems: [
           { task: 'Finalisasi job description & scorecard VP of Sales', deadline: '3 hari', owner: 'Klien' },
-          { task: 'Penyusunan dashboard keuangan unit economics di MurshidAI', deadline: '1 minggu', owner: 'Klien & Tim' },
+          { task: 'Penyusunan dashboard keuangan unit economics di MursyidAI', deadline: '1 minggu', owner: 'Klien & Tim' },
           { task: 'Check-in progres strategi via ruang virtual terenkripsi', deadline: '2 minggu', owner: 'Mentor & Klien' }
         ],
         recommendedSentiment: 'Optimis & Komitmen Tinggi'

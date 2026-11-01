@@ -51,7 +51,7 @@ export const AutomatedNotificationDrawer: React.FC<AutomatedNotificationDrawerPr
 
     const newNotif: NotificationItem = {
       id: `notif-${Date.now()}`,
-      title: 'Pemberitahuan Sistem MurshidAI',
+      title: 'Pemberitahuan Sistem MursyidAI',
       message: testPushText,
       timestamp: 'Baru saja',
       type: 'session_alert',

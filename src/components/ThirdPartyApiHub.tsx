@@ -224,7 +224,7 @@ export const ThirdPartyApiHub: React.FC<ThirdPartyApiHubProps> = ({
             </div>
 
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Mensimulasikan panggilan webhook pihak ketiga dan memicu notifikasi otomatis secara real-time pada sistem MurshidAI.
+              Mensimulasikan panggilan webhook pihak ketiga dan memicu notifikasi otomatis secara real-time pada sistem MursyidAI.
             </p>
 
             <button

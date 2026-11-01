@@ -17,7 +17,7 @@ export const INITIAL_SESSIONS: Session[] = [
     status: 'In Progress',
     fee: 4500000,
     currency: 'IDR',
-    meetingUrl: 'https://meet.murshid.ai/room-exec-001',
+    meetingUrl: 'https://meet.mursyid.ai/room-exec-001',
     hijriDate: '20 Jumada al-Ula 1448 H',
     prayerBufferConflict: false,
     isEncrypted: true,
@@ -46,7 +46,7 @@ export const INITIAL_SESSIONS: Session[] = [
     status: 'Upcoming',
     fee: 6250000,
     currency: 'IDR',
-    meetingUrl: 'https://meet.murshid.ai/room-strat-002',
+    meetingUrl: 'https://meet.mursyid.ai/room-strat-002',
     hijriDate: '20 Jumada al-Ula 1448 H',
     prayerBufferConflict: false,
     isEncrypted: true,
@@ -74,7 +74,7 @@ export const INITIAL_SESSIONS: Session[] = [
     status: 'Upcoming',
     fee: 3800000,
     currency: 'IDR',
-    meetingUrl: 'https://meet.murshid.ai/room-coach-003',
+    meetingUrl: 'https://meet.mursyid.ai/room-coach-003',
     hijriDate: '21 Jumada al-Ula 1448 H',
     prayerBufferConflict: false,
     isEncrypted: true,
@@ -101,7 +101,7 @@ export const INITIAL_SESSIONS: Session[] = [
     status: 'Completed',
     fee: 8500000,
     currency: 'IDR',
-    meetingUrl: 'https://meet.murshid.ai/room-group-004',
+    meetingUrl: 'https://meet.mursyid.ai/room-group-004',
     hijriDate: '19 Jumada al-Ula 1448 H',
     prayerBufferConflict: false,
     isEncrypted: true,
@@ -129,7 +129,7 @@ export const INITIAL_SESSIONS: Session[] = [
     status: 'Completed',
     fee: 7500000,
     currency: 'IDR',
-    meetingUrl: 'https://meet.murshid.ai/room-strat-005',
+    meetingUrl: 'https://meet.mursyid.ai/room-strat-005',
     hijriDate: '17 Jumada al-Ula 1448 H',
     prayerBufferConflict: false,
     isEncrypted: true,
@@ -163,6 +163,19 @@ export const INITIAL_CLIENTS: ClientProfile[] = [
       resilience: 88,
       financialAcumen: 84,
       teamAlignment: 89
+    },
+    kpiTrend: {
+      recentDeltaPercent: 1.8,
+      trendDirection: 'improving',
+      urgencyScore: 42,
+      urgencyTier: 'Warning',
+      laggingPillar: 'Financial Acumen (84/100)',
+      previousAvgScore: 86.2,
+      currentAvgScore: 88.0,
+      overdueTasksCount: 0,
+      daysSinceLastSession: 4,
+      urgencyReason: 'Performa stabil secara umum, namun evaluasi Series B menuntut peningkatan efisiensi unit economics.',
+      recommendedIntervention: 'Review final model finansial dan validasi target valuasi Series B sebelum pitch investor.'
     }
   },
   {
@@ -185,6 +198,19 @@ export const INITIAL_CLIENTS: ClientProfile[] = [
       resilience: 82,
       financialAcumen: 78,
       teamAlignment: 86
+    },
+    kpiTrend: {
+      recentDeltaPercent: -11.4,
+      trendDirection: 'declining',
+      urgencyScore: 86,
+      urgencyTier: 'Critical',
+      laggingPillar: 'Financial Acumen (78/100) & Leadership',
+      previousAvgScore: 97.2,
+      currentAvgScore: 85.8,
+      overdueTasksCount: 1,
+      daysSinceLastSession: 12,
+      urgencyReason: 'Penurunan tajam skor finansial (-11.4%) dan kendala burnout dalam transisi kepemimpinan engineering.',
+      recommendedIntervention: 'Jadwalkan sesi intervensi restrukturisasi prioritas dan audit burn-rate infrastruktur cloud.'
     }
   },
   {
@@ -207,6 +233,19 @@ export const INITIAL_CLIENTS: ClientProfile[] = [
       resilience: 91,
       financialAcumen: 83,
       teamAlignment: 88
+    },
+    kpiTrend: {
+      recentDeltaPercent: -4.2,
+      trendDirection: 'stagnant',
+      urgencyScore: 62,
+      urgencyTier: 'Warning',
+      laggingPillar: 'Execution (80/100) & Strategy',
+      previousAvgScore: 89.2,
+      currentAvgScore: 85.0,
+      overdueTasksCount: 1,
+      daysSinceLastSession: 7,
+      urgencyReason: 'Eksekusi sprint tertunda 2 minggu berturut-turut pada implementasi evaluasi umpan balik 360 derajat.',
+      recommendedIntervention: 'Fasilitasi sesi 1-on-1 mikro-komitmen untuk memecah milestone menjadi siklus 3 hari.'
     }
   },
   {
@@ -229,6 +268,54 @@ export const INITIAL_CLIENTS: ClientProfile[] = [
       resilience: 94,
       financialAcumen: 91,
       teamAlignment: 93
+    },
+    kpiTrend: {
+      recentDeltaPercent: 8.6,
+      trendDirection: 'improving',
+      urgencyScore: 15,
+      urgencyTier: 'On-Track',
+      laggingPillar: 'Semua Pilar Optimal (>90)',
+      previousAvgScore: 84.9,
+      currentAvgScore: 93.5,
+      overdueTasksCount: 0,
+      daysSinceLastSession: 2,
+      urgencyReason: 'Momentum ekspansi sangat kuat dengan capaian regulasi cross-border mendahului jadwal.',
+      recommendedIntervention: 'Pertahankan ritme bi-weekly dan siapkan proposal kemitraan perbankan di forum GCC.'
+    }
+  },
+  {
+    id: 'CLI-005',
+    name: 'Bambang Hartono',
+    company: 'Barakah Food Chain',
+    role: 'President Director',
+    email: 'bambang@barakahfoods.com',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+    activeTier: 'Enterprise Retainer',
+    totalSessions: 10,
+    completedSessions: 8,
+    satisfactionScore: 4.82,
+    joinDate: '2026-02-01',
+    confidentialVaultNotes: 'Restrukturisasi keuangan mendesak dan transisi obligasi konvensional menuju sukuk ijarah.',
+    radarScores: {
+      leadership: 82,
+      strategy: 78,
+      execution: 72,
+      resilience: 76,
+      financialAcumen: 70,
+      teamAlignment: 79
+    },
+    kpiTrend: {
+      recentDeltaPercent: -16.8,
+      trendDirection: 'declining',
+      urgencyScore: 94,
+      urgencyTier: 'Critical',
+      laggingPillar: 'Financial Acumen (70/100) & Execution (72/100)',
+      previousAvgScore: 92.8,
+      currentAvgScore: 76.0,
+      overdueTasksCount: 2,
+      daysSinceLastSession: 18,
+      urgencyReason: 'Penurunan performa paling tajam (-16.8%), 2 action items restrukturisasi utang sukuk terlambat dari jadwal.',
+      recommendedIntervention: 'JADWALKAN INTERVENSI SEGERA: Sesi rebalancing modal darurat 60 menit dan audit likuiditas.'
     }
   }
 ];
@@ -349,7 +436,7 @@ export const INITIAL_INTEGRATIONS: ThirdPartyConfig[] = [
     connected: true,
     lastSync: 'Hari ini, 10:45 WIB',
     apiKeyMasked: 'AIzaSyD-•••••••••••••••••••••••••K90',
-    webhookUrl: 'https://api.murshid.ai/v1/integrations/google-calendar/sync'
+    webhookUrl: 'https://api.mursyid.ai/v1/integrations/google-calendar/sync'
   },
   {
     id: 'int-2',
@@ -359,7 +446,7 @@ export const INITIAL_INTEGRATIONS: ThirdPartyConfig[] = [
     connected: true,
     lastSync: 'Hari ini, 09:30 WIB',
     apiKeyMasked: 'zoom_sec_•••••••••••••••••••••••8X7',
-    webhookUrl: 'https://api.murshid.ai/v1/integrations/virtual-room/webhook'
+    webhookUrl: 'https://api.mursyid.ai/v1/integrations/virtual-room/webhook'
   },
   {
     id: 'int-3',
@@ -369,7 +456,7 @@ export const INITIAL_INTEGRATIONS: ThirdPartyConfig[] = [
     connected: true,
     lastSync: 'Hari ini, 10:50 WIB',
     apiKeyMasked: 'wa_live_••••••••••••••••••••••••3M2',
-    webhookUrl: 'https://api.murshid.ai/v1/integrations/whatsapp/reminders'
+    webhookUrl: 'https://api.mursyid.ai/v1/integrations/whatsapp/reminders'
   },
   {
     id: 'int-4',
@@ -379,7 +466,7 @@ export const INITIAL_INTEGRATIONS: ThirdPartyConfig[] = [
     connected: true,
     lastSync: 'Hari ini, 10:52 WIB',
     apiKeyMasked: 'Mid-server-•••••••••••••••••••••1P4',
-    webhookUrl: 'https://api.murshid.ai/v1/integrations/midtrans/notification'
+    webhookUrl: 'https://api.mursyid.ai/v1/integrations/midtrans/notification'
   },
   {
     id: 'int-5',
@@ -389,7 +476,7 @@ export const INITIAL_INTEGRATIONS: ThirdPartyConfig[] = [
     connected: true,
     lastSync: 'Kemarin, 18:20 WIB',
     apiKeyMasked: 'sk_live_••••••••••••••••••••••••9W1',
-    webhookUrl: 'https://api.murshid.ai/v1/integrations/stripe/webhook'
+    webhookUrl: 'https://api.mursyid.ai/v1/integrations/stripe/webhook'
   }
 ];
 

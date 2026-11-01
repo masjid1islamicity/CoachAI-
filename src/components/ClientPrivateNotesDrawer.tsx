@@ -75,7 +75,7 @@ export const ClientPrivateNotesDrawer: React.FC<ClientPrivateNotesDrawerProps> =
   // Load from localStorage or defaults
   const [allNotes, setAllNotes] = useState<CoachPrivateNote[]>(() => {
     try {
-      const saved = localStorage.getItem('murshid_coach_notes');
+      const saved = localStorage.getItem('mursyid_coach_notes') || localStorage.getItem('murshid_coach_notes');
       if (saved) return JSON.parse(saved);
     } catch (e) {
       console.warn('Failed to parse notes from localStorage:', e);
@@ -92,7 +92,7 @@ export const ClientPrivateNotesDrawer: React.FC<ClientPrivateNotesDrawerProps> =
   // Sync to localStorage whenever allNotes changes
   useEffect(() => {
     try {
-      localStorage.setItem('murshid_coach_notes', JSON.stringify(allNotes));
+      localStorage.setItem('mursyid_coach_notes', JSON.stringify(allNotes));
     } catch (e) {
       console.error('Failed to save notes to localStorage:', e);
     }
@@ -143,7 +143,7 @@ export const ClientPrivateNotesDrawer: React.FC<ClientPrivateNotesDrawerProps> =
       return;
     }
 
-    const header = `=== CATATAN PRIVAT COACH & MENTOR MURSHID AI ===\nKlien: ${client.name} (${client.company})\nRole: ${client.role}\nDiekspor: ${new Date().toLocaleString('id-ID')}\n==============================================\n\n`;
+    const header = `=== CATATAN PRIVAT COACH & MENTOR MURSYID AI ===\nKlien: ${client.name} (${client.company})\nRole: ${client.role}\nDiekspor: ${new Date().toLocaleString('id-ID')}\n==============================================\n\n`;
     const body = clientNotes
       .map(
         (n, i) =>

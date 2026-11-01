@@ -37,7 +37,7 @@ export const SecurityEncryptionModal: React.FC<SecurityEncryptionModalProps> = (
   const [isRotatingKeys, setIsRotatingKeys] = useState(false);
 
   useEffect(() => {
-    computeFingerprint('MurshidAI-Master-Key-2026-Oct').then((fp) => setFingerprint(fp));
+    computeFingerprint('MursyidAI-Master-Key-2026-Oct').then((fp) => setFingerprint(fp));
   }, []);
 
   if (!isOpen) return null;
@@ -57,7 +57,7 @@ export const SecurityEncryptionModal: React.FC<SecurityEncryptionModalProps> = (
   const handleRotateKeys = () => {
     setIsRotatingKeys(true);
     setTimeout(async () => {
-      const newFp = await computeFingerprint(`MurshidAI-Key-${Date.now()}`);
+      const newFp = await computeFingerprint(`MursyidAI-Key-${Date.now()}`);
       setFingerprint(newFp);
       setIsRotatingKeys(false);
       alert('Kunci kriptografis sesi berhasil dirotasi dengan aman!');

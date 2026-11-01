@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <div className="flex items-center gap-1.5">
                 <span className="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                  Murshid<span className="text-emerald-600 dark:text-emerald-400">AI</span>
+                  Mursyid<span className="text-emerald-600 dark:text-emerald-400">AI</span>
                 </span>
                 <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider">
                   Enterprise

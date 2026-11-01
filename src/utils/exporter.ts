@@ -37,7 +37,7 @@ export function exportMonthlyExecutivePdf(params: {
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(20);
   doc.setFont('helvetica', 'bold');
-  doc.text('MURSHID AI', 16, 16);
+  doc.text('MURSYID AI', 16, 16);
 
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
@@ -213,7 +213,7 @@ export function exportMonthlyExecutivePdf(params: {
   doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(148, 163, 184);
-  doc.text('Dokumen ini sah dan diterbitkan secara otomatis oleh MurshidAI Executive Reporting Engine.', 16, footerY + 6);
+  doc.text('Dokumen ini sah dan diterbitkan secara otomatis oleh MursyidAI Executive Reporting Engine.', 16, footerY + 6);
   doc.text('Semua catatan sesi dilindungi enkripsi AES-256 GCM Zero-Knowledge.', 16, footerY + 10);
 
   doc.setFont('helvetica', 'bold');
@@ -313,7 +313,7 @@ export function exportMonthlyExecutivePdf(params: {
     doc.text(splitKpiText, 20, kpiY + 16);
   }
 
-  doc.save(`Laporan_Eksekutif_MurshidAI_${params.monthName}_${params.year}.pdf`);
+  doc.save(`Laporan_Eksekutif_MursyidAI_${params.monthName}_${params.year}.pdf`);
 }
 
 /**
@@ -408,13 +408,13 @@ export function exportDataToExcel(params: {
   }
 
   // Trigger Excel file download
-  XLSX.writeFile(wb, `MurshidAI_Master_Dataset_${new Date().toISOString().slice(0, 10)}.xlsx`);
+  XLSX.writeFile(wb, `MursyidAI_Master_Dataset_${new Date().toISOString().slice(0, 10)}.xlsx`);
 }
 
 /**
  * Export generic dataset to CSV format for Google Sheets & Excel
  */
-export function exportToCsv(data: any[], filename = 'export_murshid_ai.csv') {
+export function exportToCsv(data: any[], filename = 'export_mursyid_ai.csv') {
   if (!data || data.length === 0) return;
   const headers = Object.keys(data[0]);
   const rows = data.map((obj) =>

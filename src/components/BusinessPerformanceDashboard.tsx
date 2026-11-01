@@ -321,7 +321,7 @@ export const BusinessPerformanceDashboard: React.FC<BusinessPerformanceDashboard
               <div className="flex items-center gap-2">
                 <CreditCard className="w-4 h-4 text-emerald-600" />
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-                  Gerbang Pembayaran Instan MurshidAI
+                  Gerbang Pembayaran Instan MursyidAI
                 </h3>
               </div>
               <button

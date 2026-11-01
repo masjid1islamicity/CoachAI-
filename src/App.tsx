@@ -61,22 +61,33 @@ export default function App() {
 
   // Core Data
   const [sessions, setSessions] = useState<Session[]>(() => {
-    const saved = localStorage.getItem('murshid_sessions');
+    const saved = localStorage.getItem('mursyid_sessions') || localStorage.getItem('murshid_sessions');
     return saved ? JSON.parse(saved) : INITIAL_SESSIONS;
   });
 
   const [clients, setClients] = useState<ClientProfile[]>(() => {
-    const saved = localStorage.getItem('murshid_clients');
-    return saved ? JSON.parse(saved) : INITIAL_CLIENTS;
+    try {
+      const saved = localStorage.getItem('mursyid_clients') || localStorage.getItem('murshid_clients');
+      if (!saved) return INITIAL_CLIENTS;
+      const parsed: ClientProfile[] = JSON.parse(saved);
+      return INITIAL_CLIENTS.map((initClient) => {
+        const found = parsed.find((c) => c.id === initClient.id);
+        return found
+          ? { ...initClient, ...found, kpiTrend: found.kpiTrend || initClient.kpiTrend }
+          : initClient;
+      });
+    } catch {
+      return INITIAL_CLIENTS;
+    }
   });
 
   const [invoices, setInvoices] = useState<Invoice[]>(() => {
-    const saved = localStorage.getItem('murshid_invoices');
+    const saved = localStorage.getItem('mursyid_invoices') || localStorage.getItem('murshid_invoices');
     return saved ? JSON.parse(saved) : INITIAL_INVOICES;
   });
 
   const [kpis, setKpis] = useState<MonthlyKpiTarget[]>(() => {
-    const saved = localStorage.getItem('murshid_kpis');
+    const saved = localStorage.getItem('mursyid_kpis') || localStorage.getItem('murshid_kpis');
     return saved ? JSON.parse(saved) : INITIAL_MONTHLY_KPIS;
   });
 
@@ -104,15 +115,15 @@ export default function App() {
 
   // Persist sessions, invoices & kpis
   useEffect(() => {
-    localStorage.setItem('murshid_sessions', JSON.stringify(sessions));
+    localStorage.setItem('mursyid_sessions', JSON.stringify(sessions));
   }, [sessions]);
 
   useEffect(() => {
-    localStorage.setItem('murshid_invoices', JSON.stringify(invoices));
+    localStorage.setItem('mursyid_invoices', JSON.stringify(invoices));
   }, [invoices]);
 
   useEffect(() => {
-    localStorage.setItem('murshid_kpis', JSON.stringify(kpis));
+    localStorage.setItem('mursyid_kpis', JSON.stringify(kpis));
   }, [kpis]);
 
   // Hijri date & Prayer times
@@ -213,7 +224,7 @@ export default function App() {
       Biaya: s.fee,
       Hijri: s.hijriDate,
     }));
-    exportToCsv(rows, 'murshid_ai_spreadsheet.csv');
+    exportToCsv(rows, 'mursyid_ai_spreadsheet.csv');
     showToast('Dataset format CSV Google Sheets berhasil diekspor.');
   };
 
@@ -559,7 +570,7 @@ export default function App() {
         {currentTab === 'aiCopilot' && (
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-xs text-center space-y-4">
             <h2 className="text-lg font-bold text-slate-900 dark:text-white">
-              MurshidAI Strategic Co-Pilot Engine
+              MursyidAI Strategic Co-Pilot Engine
             </h2>
             <p className="text-xs text-slate-500 max-w-lg mx-auto">
               Didukung oleh model Google Gemini AI, asisten penasihat eksekutif menganalisis isu manajemen, memetakan kerangka GROW, dan merumuskan rencana aksi kuartalan.

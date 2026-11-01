@@ -2,7 +2,7 @@ import { SupportedLanguage } from '../types';
 
 export const translations = {
   id: {
-    appName: 'MurshidAI',
+    appName: 'MursyidAI',
     appSubtitle: 'Superaplikasi Coaching, Mentoring & Consulting Cerdas',
     nav: {
       dashboard: 'Dashboard',
@@ -68,6 +68,17 @@ export const translations = {
       finance: 'Kecakapan Finansial',
       alignment: 'Keselarasan Tim',
       viewVault: 'Buka Confidential Vault',
+      smartSort: 'Smart Sort (Urutan Urgensi)',
+      urgencyRanking: 'Peringkat Urgensi KPI',
+      criticalUrgency: 'Kritis / Intervensi Segera',
+      warningUrgency: 'Perhatian / Monitoring',
+      onTrackUrgency: 'Stabil / On-Track',
+      trendDeclining: 'Tren Menurun',
+      trendStagnant: 'Stagnan',
+      trendImproving: 'Meningkat',
+      laggingBottleneck: 'Hambatan KPI Utama',
+      recommendedIntervention: 'Rekomendasi Intervensi Coach',
+      viewUrgencyMatrix: 'Matriks Urgensi Seluruh Klien',
     },
     finance: {
       title: 'Sistem Pembayaran Terintegrasi & Gerbang Faktur',
@@ -115,7 +126,7 @@ export const translations = {
       disconnected: 'Terputus',
     },
     aiCopilot: {
-      title: 'MurshidAI Executive Co-Pilot',
+      title: 'MursyidAI Executive Co-Pilot',
       subtitle: 'Asisten cerdas berbasis Gemini AI untuk diagnosis sesi, model GROW, dan rencana aksi',
       analyzeSession: 'Jalankan Diagnosis AI',
       sessionNotesInput: 'Masukkan catatan atau topik sesi',
@@ -126,7 +137,7 @@ export const translations = {
     }
   },
   en: {
-    appName: 'MurshidAI',
+    appName: 'MursyidAI',
     appSubtitle: 'Intelligent AI Superapp for Coaching, Mentoring & Consulting',
     nav: {
       dashboard: 'Dashboard',
@@ -192,6 +203,17 @@ export const translations = {
       finance: 'Financial Acumen',
       alignment: 'Team Alignment',
       viewVault: 'Unlock Confidential Vault',
+      smartSort: 'Smart Sort (Urgency Ranking)',
+      urgencyRanking: 'KPI Urgency Ranking',
+      criticalUrgency: 'Critical / Needs Intervention',
+      warningUrgency: 'Warning / Monitoring',
+      onTrackUrgency: 'On-Track & Stable',
+      trendDeclining: 'Declining Trend',
+      trendStagnant: 'Stagnant',
+      trendImproving: 'Improving',
+      laggingBottleneck: 'Critical KPI Bottleneck',
+      recommendedIntervention: 'Coach Intervention Recommendation',
+      viewUrgencyMatrix: 'Full Client Urgency Matrix',
     },
     finance: {
       title: 'Integrated Billing & Payment Gateway',
@@ -239,7 +261,7 @@ export const translations = {
       disconnected: 'Disconnected',
     },
     aiCopilot: {
-      title: 'MurshidAI Executive Co-Pilot',
+      title: 'MursyidAI Executive Co-Pilot',
       subtitle: 'Gemini-powered diagnostic assistant for executive coaching, GROW model, and action plans',
       analyzeSession: 'Execute AI Diagnosis',
       sessionNotesInput: 'Enter session raw notes or strategic agenda',
@@ -316,6 +338,17 @@ export const translations = {
       finance: 'الفطنة المالية',
       alignment: 'توافق الفريق',
       viewVault: 'فتح الخزنة السرية',
+      smartSort: 'الترتيب الذكي (حسب الضرورة)',
+      urgencyRanking: 'تصنيف الأولوية والضرورة',
+      criticalUrgency: 'حرجة / تدخل فوري',
+      warningUrgency: 'تنبيه ومتابعة',
+      onTrackUrgency: 'مستقر وضمن الخطة',
+      trendDeclining: 'تراجع ملحوظ',
+      trendStagnant: 'راكد',
+      trendImproving: 'تحسن مستمر',
+      laggingBottleneck: 'العقبة الرئيسية في المؤشرات',
+      recommendedIntervention: 'تدخل المدرب المقترح',
+      viewUrgencyMatrix: 'مصفوفة أولوية العملاء',
     },
     finance: {
       title: 'بوابة الدفع والفواتير المتكاملة',

@@ -49,7 +49,7 @@ async function deriveKey(passphrase: string): Promise<CryptoKey> {
  * Encrypt plaintext using AES-GCM 256
  * Returns format: "iv_hex:ciphertext_hex"
  */
-export async function encryptText(plaintext: string, secretKey = 'Murshid-Enterprise-Master-Key-2026'): Promise<string> {
+export async function encryptText(plaintext: string, secretKey = 'Mursyid-Enterprise-Master-Key-2026'): Promise<string> {
   try {
     const key = await deriveKey(secretKey);
     const iv = window.crypto.getRandomValues(new Uint8Array(12));
@@ -77,7 +77,7 @@ export async function encryptText(plaintext: string, secretKey = 'Murshid-Enterp
 /**
  * Decrypt cipher formatted as "E2E::iv_hex::cipher_hex"
  */
-export async function decryptText(encryptedPayload: string, secretKey = 'Murshid-Enterprise-Master-Key-2026'): Promise<string> {
+export async function decryptText(encryptedPayload: string, secretKey = 'Mursyid-Enterprise-Master-Key-2026'): Promise<string> {
   try {
     if (!encryptedPayload.startsWith('E2E::')) {
       if (encryptedPayload.startsWith('E2E_ERR::')) {

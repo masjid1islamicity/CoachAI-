@@ -97,7 +97,7 @@ export const MonthlyKpiTracker: React.FC<MonthlyKpiTrackerProps> = ({
   // AI Insights State
   const [insights, setInsights] = useState<Record<string, KpiInsightRecommendation>>(() => {
     try {
-      const saved = localStorage.getItem('murshid_kpi_insights');
+      const saved = localStorage.getItem('mursyid_kpi_insights') || localStorage.getItem('murshid_kpi_insights');
       if (saved) return JSON.parse(saved);
     } catch (e) {
       console.warn('Failed to load insights from localStorage:', e);
@@ -107,7 +107,7 @@ export const MonthlyKpiTracker: React.FC<MonthlyKpiTrackerProps> = ({
 
   const [strategicPulse, setStrategicPulse] = useState<string>(() => {
     try {
-      const saved = localStorage.getItem('murshid_kpi_pulse');
+      const saved = localStorage.getItem('mursyid_kpi_pulse') || localStorage.getItem('murshid_kpi_pulse');
       if (saved) return saved;
     } catch {}
     return 'Performa coaching periode Oktober 2026 mencatatkan indeks komposit 92.4%. Titik ungkit akselerasi terbesar berada pada penyelesaian action items klien dan optimalisasi batching jam konsultasi.';
@@ -135,8 +135,8 @@ export const MonthlyKpiTracker: React.FC<MonthlyKpiTrackerProps> = ({
   // Persist insights
   useEffect(() => {
     try {
-      localStorage.setItem('murshid_kpi_insights', JSON.stringify(insights));
-      localStorage.setItem('murshid_kpi_pulse', strategicPulse);
+      localStorage.setItem('mursyid_kpi_insights', JSON.stringify(insights));
+      localStorage.setItem('mursyid_kpi_pulse', strategicPulse);
     } catch (e) {
       console.error('Failed to save insights:', e);
     }

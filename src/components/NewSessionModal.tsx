@@ -85,7 +85,7 @@ export const NewSessionModal: React.FC<NewSessionModalProps> = ({
       status: 'Upcoming',
       fee: Number(fee),
       currency,
-      meetingUrl: `https://meet.murshid.ai/room-${Math.floor(1000 + Math.random() * 9000)}`,
+      meetingUrl: `https://meet.mursyid.ai/room-${Math.floor(1000 + Math.random() * 9000)}`,
       hijriDate: hijriPreview,
       prayerBufferConflict: prayerConflict.hasConflict,
       isEncrypted: true,

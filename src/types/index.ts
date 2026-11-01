@@ -40,6 +40,22 @@ export interface Session {
   tags: string[];
 }
 
+export type UrgencyTier = 'Critical' | 'Warning' | 'On-Track';
+
+export interface ClientKpiTrend {
+  recentDeltaPercent: number; // e.g. -14.2% drop vs previous month
+  trendDirection: 'declining' | 'stagnant' | 'improving';
+  urgencyScore: number; // 0 - 100, where 100 is maximum urgency
+  urgencyTier: UrgencyTier;
+  laggingPillar: string;
+  previousAvgScore: number;
+  currentAvgScore: number;
+  overdueTasksCount: number;
+  daysSinceLastSession: number;
+  urgencyReason: string;
+  recommendedIntervention: string;
+}
+
 export interface ClientProfile {
   id: string;
   name: string;
@@ -61,6 +77,7 @@ export interface ClientProfile {
     financialAcumen: number;
     teamAlignment: number;
   };
+  kpiTrend?: ClientKpiTrend;
 }
 
 export interface Invoice {
